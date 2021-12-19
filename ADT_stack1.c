@@ -45,6 +45,15 @@ int pop(struct stack* s)
     }
 }
 
+int peek(struct stack* s, int idx)
+{
+    if (s->top-idx+1 < 0) {
+        printf("Not a valid position");
+        return -1;
+    }
+    return s->arr[s->top-idx+1];
+}
+
 void display(struct stack* s)
 {
     for (int i=0; i<=s->top; i++){
