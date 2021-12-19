@@ -32,8 +32,7 @@ int parenthesisMatch(char* exp)
     struct stack* s = (struct stack*)malloc(sizeof(struct stack));
     s->top = -1;
     s->size = strlen(exp);
-    s->arr = (char *)malloc(s->size * sizeof(char));
-       
+    s->arr = (char *)malloc(s->size * sizeof(char));   
     for (int i=0; exp[i] != '\0'; i++)
     {
         if (exp[i] == '(') {
